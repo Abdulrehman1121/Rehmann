@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Condition checking with if else</h2>   
+<form onsubmit="check(); return false">
+   Enter your per here<input type="text" id="per">
+   <button>Check</button>
+
+</form>
+<h3 id="space"></h3>
+<script>
+function check(){
+let a = +document.querySelector("#per").value
+
+if (a>=90){
+    document.querySelector("#space").innerHTML="Grade A+";
+}
+
+else if (a>=80){
+    document.querySelector("#space").innerHTML="Grade A1";
+}
+
+else if (a>=70){
+    document.querySelector("#space").innerHTML="Grade A";
+}
+
+else if (a>=60){
+    document.querySelector("#space").innerHTML="Grade B";
+}
+
+else if (a>=50){
+    document.querySelector("#space").innerHTML="Grade C";
+}
+else if (a>99){
+    document.querySelector("#space").innerHTML="enter valid input";
+}
+else{
+    document.querySelector("#space").innerHTML="Grade F";
+}
+}
+</script>
+</body>
+</html>
